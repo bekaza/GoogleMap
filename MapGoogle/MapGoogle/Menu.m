@@ -18,8 +18,15 @@
 +(NSArray *)loadMenu
 {
     NSArray * mapDemo = @[@"MapBasic"];
-    NSArray * Direct = @[@"2 Mark"];
+    NSArray * Direct = @[@"2 Mark Direction"];
     
     return @[mapDemo,Direct];
+}
+
+- (NSDictionary *)newDemo:(Class) class
+                withTitle:(NSString *)title
+           andDescription:(NSString *)description {
+    return [[NSDictionary alloc] initWithObjectsAndKeys:class, @"controller",
+            title, @"title", description, @"description", nil];
 }
 @end

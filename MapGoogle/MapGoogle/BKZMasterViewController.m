@@ -8,6 +8,7 @@
 
 #import "BKZMasterViewController.h"
 #import "Menu.h"
+#import "BKZMapView.h"
 
 @interface BKZMasterViewController ()
 
@@ -38,12 +39,6 @@
     
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -80,7 +75,8 @@
 -(void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    BKZMapView * mvc = [[BKZMapView alloc] init];
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 @end

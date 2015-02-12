@@ -35,6 +35,7 @@
 		0D14CFFB1A8A066300678D08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14CFFA1A8A066300678D08 /* SystemConfiguration.framework */; };
 		0DBD4A051A8C4A61009742EE /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD4A041A8C4A61009742EE /* Menu.m */; };
 		0DBD4A081A8C6241009742EE /* BKZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */; };
+		0DBD4A0C1A8C7CED009742EE /* BKZMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD4A0B1A8C7CED009742EE /* BKZMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		0DBD4A041A8C4A61009742EE /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		0DBD4A061A8C6241009742EE /* BKZMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKZMasterViewController.h; sourceTree = "<group>"; };
 		0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKZMasterViewController.m; sourceTree = "<group>"; };
+		0DBD4A0A1A8C7CED009742EE /* BKZMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKZMapView.h; sourceTree = "<group>"; };
+		0DBD4A0B1A8C7CED009742EE /* BKZMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKZMapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +216,8 @@
 			children = (
 				0DBD4A031A8C4A61009742EE /* Menu.h */,
 				0DBD4A041A8C4A61009742EE /* Menu.m */,
+				0DBD4A0A1A8C7CED009742EE /* BKZMapView.h */,
+				0DBD4A0B1A8C7CED009742EE /* BKZMapView.m */,
 				0DBD4A061A8C6241009742EE /* BKZMasterViewController.h */,
 				0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */,
 			);
@@ -320,6 +325,7 @@
 				0D14CFBC1A8A03A000678D08 /* main.m in Sources */,
 				0DBD4A081A8C6241009742EE /* BKZMasterViewController.m in Sources */,
 				0DBD4A051A8C4A61009742EE /* Menu.m in Sources */,
+				0DBD4A0C1A8C7CED009742EE /* BKZMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
