@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface BKZMapView : UIViewController
+@interface BKZMapView : UIViewController <GMSMapViewDelegate>
 
-@property (nonatomic, weak) GMSMapView *map;
+@property (nonatomic) GMSMapView *map;
 
 @end

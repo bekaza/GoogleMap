@@ -12,15 +12,23 @@
 
 @interface BKZMasterViewController ()
 
+@property (nonatomic) NSMutableArray * Section__;
+@property (nonatomic) NSMutableDictionary * Menu__;
+
 @end
 
 @implementation BKZMasterViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStylePlain];
+    
     if (self) {
-        // Custom initialization
+        
+        self.Section__ = [[NSMutableArray alloc] initWithArray:[Menu loadSections]];
+        self.Menu__ = [[NSMutableDictionary  alloc] init];
+        [self.Menu__ addEntriesFromDictionary:[Menu loadMenu]];
+        
     }
     return self;
 }
@@ -41,23 +49,33 @@
            forCellReuseIdentifier:@"UITableViewCell"];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    //[self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [[Menu loadSections] count];
+    return [self.Section__ count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[Menu loadMenu][section] count];
+    NSString * sec = self.Section__[section];
+    return [self.Menu__[sec] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [Menu loadSections][section];
+    return self.Section__[section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -67,7 +85,8 @@
                                                    forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [Menu loadMenu][indexPath.section][indexPath.row];
+    NSString * sec = self.Section__[indexPath.section];
+    cell.textLabel.text = self.Menu__[sec][indexPath.row];
 
     return cell;
 }
@@ -75,8 +94,9 @@
 -(void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BKZMapView * mvc = [[BKZMapView alloc] init];
-    [self.navigationController pushViewController:mvc animated:YES];
+    BKZMapView * mv = [[BKZMapView alloc] init];
+    
+    [self.navigationController pushViewController:mv animated:YES];
 }
 
 @end

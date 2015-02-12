@@ -12,15 +12,17 @@
 
 +(NSArray *)loadSections
 {
-    return @[@"Map", @"Diretions"];
+    return @[@"Map", @"Direction"];
 }
 
-+(NSArray *)loadMenu
++(NSDictionary *)loadMenu
 {
-    NSArray * mapDemo = @[@"MapBasic"];
+    NSArray * mapDemo = @[@"MapBasic", @"MapType"];
     NSArray * Direct = @[@"2 Mark Direction"];
     
-    return @[mapDemo,Direct];
+    NSDictionary *allMenu = @{@"Map": mapDemo, @"Direction": Direct};
+    
+    return allMenu;
 }
 
 - (NSDictionary *)newDemo:(Class) class

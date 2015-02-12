@@ -10,5 +10,5 @@
 
 @interface Menu : NSObject
 + (NSArray *)loadSections;
-+ (NSArray *)loadMenu;
++ (NSDictionary *)loadMenu;
 @end
