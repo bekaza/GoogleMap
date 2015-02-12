@@ -34,6 +34,7 @@
 		0D14CFF91A8A065900678D08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14CFF81A8A065900678D08 /* QuartzCore.framework */; };
 		0D14CFFB1A8A066300678D08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14CFFA1A8A066300678D08 /* SystemConfiguration.framework */; };
 		0DBD4A051A8C4A61009742EE /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD4A041A8C4A61009742EE /* Menu.m */; };
+		0DBD4A081A8C6241009742EE /* BKZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		0D14CFFF1A8A082400678D08 /* BKZMapAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKZMapAPIKey.h; sourceTree = "<group>"; };
 		0DBD4A031A8C4A61009742EE /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		0DBD4A041A8C4A61009742EE /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		0DBD4A061A8C6241009742EE /* BKZMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKZMasterViewController.h; sourceTree = "<group>"; };
+		0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKZMasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +172,7 @@
 				0D14CFFF1A8A082400678D08 /* BKZMapAPIKey.h */,
 				0D14CFBE1A8A03A000678D08 /* BKZAppDelegate.h */,
 				0D14CFBF1A8A03A000678D08 /* BKZAppDelegate.m */,
-				0DBD4A031A8C4A61009742EE /* Menu.h */,
-				0DBD4A041A8C4A61009742EE /* Menu.m */,
+				0DBD4A091A8C65C3009742EE /* TableViewCell */,
 				0D14CFC11A8A03A000678D08 /* Images.xcassets */,
 				0D14CFB61A8A03A000678D08 /* Supporting Files */,
 			);
@@ -204,6 +206,17 @@
 				0D14CFD11A8A03A000678D08 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DBD4A091A8C65C3009742EE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD4A031A8C4A61009742EE /* Menu.h */,
+				0DBD4A041A8C4A61009742EE /* Menu.m */,
+				0DBD4A061A8C6241009742EE /* BKZMasterViewController.h */,
+				0DBD4A071A8C6241009742EE /* BKZMasterViewController.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +318,7 @@
 			files = (
 				0D14CFC01A8A03A000678D08 /* BKZAppDelegate.m in Sources */,
 				0D14CFBC1A8A03A000678D08 /* main.m in Sources */,
+				0DBD4A081A8C6241009742EE /* BKZMasterViewController.m in Sources */,
 				0DBD4A051A8C4A61009742EE /* Menu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

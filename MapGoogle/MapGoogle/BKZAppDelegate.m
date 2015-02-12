@@ -8,6 +8,7 @@
 
 #import "BKZAppDelegate.h"
 #import "BKZMapAPIKey.h"
+#import "BKZMasterViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @implementation BKZAppDelegate
@@ -18,6 +19,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    BKZMasterViewController * mvc = [[BKZMasterViewController alloc] init];
+    
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mvc];
+    
+    self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
